@@ -1,0 +1,11 @@
+h1 {
+    color: red;
+    text-align: center;
+}
+ul {
+    list-style-type: square;
+    
+}
+.shopping-list {
+    background-color:lightblue
+}
