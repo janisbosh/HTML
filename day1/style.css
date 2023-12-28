@@ -60,9 +60,14 @@ h2 {
     text-align: center;
 }
 
-button {
-    background-color: #2ecc71;
-    color: #e74c3c;
-    height: 10%;
-    width: 20%;
+#redButton {
+    background-color: red;
+    width: 120px;
+    height: 120px;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
 }
+
