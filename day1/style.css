@@ -59,3 +59,10 @@
 h2 {
     text-align: center;
 }
+
+button {
+    background-color: #2ecc71;
+    color: #e74c3c;
+    height: 10%;
+    width: 20%;
+}
