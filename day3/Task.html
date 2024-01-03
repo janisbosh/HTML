@@ -44,10 +44,12 @@
     </div>
     <div>
         <button onclick="parbauditSkaitli()">Pārbaudīt</button>
-        <input type="text" id="ievadesLauks" placeholder="Ievadiet skaitli">
+        <input type="number" id="ievadesLauks" placeholder="Ievadiet skaitli">
     </div>
 
     <script>
+        let nospiedumuSkaits = 0;
+
         function parbauditSkaitli() {
             let ievadesLauks = document.getElementById("ievadesLauks");
             let ievade = ievadesLauks.value;
@@ -57,6 +59,8 @@
             } else {
                 ievadesLauks.className = "zals";
             }
+            nospiedumuSkaits++;
+        alert("Pogu nospiešanas skaits: " + nospiedumuSkaits.toString());
         }
     </script>
 </body>
