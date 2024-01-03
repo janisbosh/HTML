@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mans CV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="intro-container">
+            <div id="intro">
+                <h2>Intro</h2>
+                <p>Es esmu Janis Bošs.</p>
+                <img id="bilde1" src="photo.jpg" alt="Interests Image">
+            </div>
+
+            <div id="sidebar">
+                <h2>Papilus info</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    laoreet dolore magna aliquam erat volutpa.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="contacts">
+        <h2>Kontakti</h2>
+        <p>E-pasts: example@example.com</p>
+        <p>Tālrunis: +371 123 123</p>
+        <p>Adrese: Miera iela, Rigas</p>
+    </div>
+
+    <div id="experience">
+        <h2>Darba pieredze un hobiji</h2>
+        <img id="bilde2" src="photo3.jpg" alt="Interests Image">
+        <ul>
+            <li>Darbs 1 - Amats 1 (Gads)</li>
+            <li>Darbs 2 - Amats 2 (Gads)</li>
+            <li>Darbs 3 - Amats 3 (Gads)</li>
+        </ul>
+    </div>
+    <div>
+        <button onclick="parbauditSkaitli()">Pārbaudīt</button>
+        <input type="text" id="ievadesLauks" placeholder="Ievadiet skaitli">
+    </div>
+
+    <script>
+        function parbauditSkaitli() {
+            let ievadesLauks = document.getElementById("ievadesLauks");
+            let ievade = ievadesLauks.value;
+
+            if (ievade % 2 !== 0) {
+                ievadesLauks.className = "sarkans";
+            } else {
+                ievadesLauks.className = "zals";
+            }
+        }
+    </script>
+</body>
+
+</html>

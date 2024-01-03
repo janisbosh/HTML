@@ -1,0 +1,93 @@
+/* Existing CSS rules... */
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#intro-container {
+    flex: 1;
+    display: flex;
+}
+
+#intro  {
+    flex: 1;
+    padding: 50px;
+    color: white;
+}
+
+#sidebar {
+    flex: 1;
+    padding: 50px;
+    color: lightblue
+}
+
+#intro {
+    background-color: #3498db;
+}
+
+#sidebar {
+    background-color: #2c3e50;
+}
+
+#contacts {
+    background-color: #2ecc71;
+    padding: 50px;
+}
+
+#experience {
+    background-color: #e74c3c;
+    overflow: hidden;
+}
+
+#bilde1 {
+    max-width: 30%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    float: left;
+}
+
+#bilde2 {
+    max-width: 30%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    float: right;
+}
+
+h2 {
+    text-align: center;
+}
+
+button {
+    background-color: #2ecc71;
+    color: #e74c3c;
+    height: 10%;
+    width: 20%;
+}
+
+
+  
+input {
+    padding: 5px;
+  }
+  
+  button {
+    padding: 8px 15px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  
+  
+  .sarkans {
+    color: red;
+  }
+  
+  .zals {
+    color: green;
+  }
+  
