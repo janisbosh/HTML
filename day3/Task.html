@@ -42,12 +42,35 @@
             <li>Darbs 3 - Amats 3 (Gads)</li>
         </ul>
     </div>
+
     <div class="input-form">
         <input type="text" id="input1" class="testInput">
-        <button id="btn1" class="btn1" onClick="task1()">Klikšķini mani!</button>
+        <button id="btn1" class="btn1" onClick="saglabatMasivu()">Ievadīt!</button>
+
+        <input type="text" id="input2" class="testInput">
+        <button id="btn2" class="btn2" onClick="mekletSkaitli()">Pārbaudīt!</button>
     </div>
 
     <script>
+        
+        let ievaditaisMasivs = [];
+              
+            function saglabatMasivu() {
+                let userInput = document.getElementById("input1").value;
+                ievaditaisMasivs = userInput.split(",");
+                console.log(ievaditaisMasivs);
+
+            }
+            function mekletSkaitli() {
+                let mekletaisSkaitlis = document.getElementById("input2").value;
+
+                if (ievaditaisMasivs.includes(mekletaisSkaitlis)) {
+                    alert(mekletaisSkaitlis + " atrodas masīvā.");
+                } else {
+                    alert(mekletaisSkaitlis + " nav atrasts masīvā.");
+                }
+            }
+        
 
         function task1() {
             let userInput = document.getElementById("input1").value;
@@ -61,16 +84,17 @@
                 for (let j = i + 1; j < arr.length; j++) {
                     if (skaitlis === arr[j]) {
                         dublikats = skaitlis;
-
+                        break;
                     }
                 }
-
                 if (dublikats !== 0) {
-
                 }
             }
-            alert("Dubultais skaitlis: " + dublikats);
-
+            if (dublikats !== 0) {
+                alert("Dubultais skaitlis: " + dublikats);
+            } else {
+                alert("Nav dubultu skaitļu.");
+            }
         }
 
     </script>
