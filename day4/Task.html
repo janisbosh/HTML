@@ -42,26 +42,61 @@
             <li>Darbs 3 - Amats 3 (Gads)</li>
         </ul>
     </div>
-    <div>
-        <button onclick="parbauditSkaitli()">Pārbaudīt</button>
-        <input type="number" id="ievadesLauks" placeholder="Ievadiet skaitli">
+
+    <div class="input-form">
+        <input type="text" id="input1" class="testInput">
+        <button id="btn1" class="btn1" onClick="saglabatMasivu()">Ievadīt!</button>
+
+        <input type="text" id="input2" class="testInput">
+        <button id="btn2" class="btn2" onClick="mekletSkaitli()">Pārbaudīt!</button>
     </div>
 
     <script>
-        let nospiedumuSkaits = 0;
+        
+        let ievaditaisMasivs = [];
+              
+            function saglabatMasivu() {
+                let userInput = document.getElementById("input1").value;
+                ievaditaisMasivs = userInput.split(",");
+                console.log(ievaditaisMasivs);
 
-        function parbauditSkaitli() {
-            let ievadesLauks = document.getElementById("ievadesLauks");
-            let ievade = ievadesLauks.value;
-
-            if (ievade % 2 !== 0) {
-                ievadesLauks.className = "sarkans";
-            } else {
-                ievadesLauks.className = "zals";
             }
-            nospiedumuSkaits++;
-        alert("Pogu nospiešanas skaits: " + nospiedumuSkaits.toString());
+            function mekletSkaitli() {
+                let mekletaisSkaitlis = document.getElementById("input2").value;
+
+                if (ievaditaisMasivs.includes(mekletaisSkaitlis)) {
+                    alert(mekletaisSkaitlis + " atrodas masīvā.");
+                } else {
+                    alert(mekletaisSkaitlis + " nav atrasts masīvā.");
+                }
+            }
+        
+
+        function task1() {
+            let userInput = document.getElementById("input1").value;
+            let arr = userInput.split(",");
+
+            let dublikats = 0;
+
+            for (let i = 0; i < arr.length; i++) {
+                let skaitlis = arr[i];
+
+                for (let j = i + 1; j < arr.length; j++) {
+                    if (skaitlis === arr[j]) {
+                        dublikats = skaitlis;
+                        break;
+                    }
+                }
+                if (dublikats !== 0) {
+                }
+            }
+            if (dublikats !== 0) {
+                alert("Dubultais skaitlis: " + dublikats);
+            } else {
+                alert("Nav dubultu skaitļu.");
+            }
         }
+
     </script>
 </body>
 
