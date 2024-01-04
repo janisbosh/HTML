@@ -42,25 +42,42 @@
             <li>Darbs 3 - Amats 3 (Gads)</li>
         </ul>
     </div>
-    <div>
-        <label for="skaitluVirkne">Ievadiet skaitļu virkni: </label>
-        <button onclick="atrastMinMax()">Lielākais un mazākais skaitlis</button>
-        <input type="text" id="skaitluVirkne">
+    <div class="input-form">
+        <input type="text" id="input1" class="testInput">
+        <button id="btn1" class="btn1" onClick="task1()">Klikšķini mani!</button>
     </div>
 
     <script>
 
-        function atrastMinMax() {
-            let inputVirkne = document.getElementById("skaitluVirkne").value;
 
-            let skaitluMasivs = inputVirkne.split(',').map(Number);
+        function task1() {
+            let userInput = document.getElementById("input1").value;
+            let arr = userInput.split(",");
 
-            let minSkaitlis = Math.min.apply(skaitluMasivs);
-            let maxSkaitlis = Math.max.apply(skaitluMasivs)
+            let dublikats = 0;
 
-            alert("Mazākais skaitlis: " + minSkaitlis + "Lielākais skaitlis: " + maxSkaitlis);
+            for (let i = 0; i < arr.length; i++) {
+                let skaitlis = arr[i];
+
+                for (let j = i + 1; j < arr.length; j++) {
+                    if (skaitlis === arr[j]) {
+                        dublikats = skaitlis;
+
+                    }
+                }
+
+                if (dublikats !== 0) {
+
+                }
+            }
+            alert("Dubultais skaitlis: " + dublikats);
+
+
         }
-        
+
+
+
+
     </script>
 </body>
 
