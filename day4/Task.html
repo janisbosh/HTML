@@ -43,24 +43,25 @@
         </ul>
     </div>
     <div>
-        <label for="skaitluVirkne">Ievadiet skaitļu virkni: </label>
-        <button onclick="atrastMinMax()">Lielākais un mazākais skaitlis</button>
-        <input type="text" id="skaitluVirkne">
+        <button onclick="parbauditSkaitli()">Pārbaudīt</button>
+        <input type="number" id="ievadesLauks" placeholder="Ievadiet skaitli">
     </div>
 
     <script>
+        let nospiedumuSkaits = 0;
 
-        function atrastMinMax() {
-            let inputVirkne = document.getElementById("skaitluVirkne").value;
+        function parbauditSkaitli() {
+            let ievadesLauks = document.getElementById("ievadesLauks");
+            let ievade = ievadesLauks.value;
 
-            let skaitluMasivs = inputVirkne.split(',').map(Number);
-
-            let minSkaitlis = Math.min.apply(skaitluMasivs);
-            let maxSkaitlis = Math.max.apply(skaitluMasivs)
-
-            alert("Mazākais skaitlis: " + minSkaitlis + "Lielākais skaitlis: " + maxSkaitlis);
+            if (ievade % 2 !== 0) {
+                ievadesLauks.className = "sarkans";
+            } else {
+                ievadesLauks.className = "zals";
+            }
+            nospiedumuSkaits++;
+        alert("Pogu nospiešanas skaits: " + nospiedumuSkaits.toString());
         }
-        
     </script>
 </body>
 
