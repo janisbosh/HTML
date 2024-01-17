@@ -1,0 +1,18 @@
+import { Component } from '@angular/core';
+import { GreetingComponent } from './greeting/greeting.component'
+import { CommonModule } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
+
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports:[CommonModule, RouterOutlet,GreetingComponent],
+
+  templateUrl:'./app.component.html',
+  styleUrl:'./app.component.css',
+})
+
+export class AppComponent {
+  title = 'day7-angular';
+}

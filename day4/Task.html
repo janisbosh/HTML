@@ -55,21 +55,21 @@
         
         let ievaditaisMasivs = [];
               
-            function saglabatMasivu() {
-                let userInput = document.getElementById("input1").value;
-                ievaditaisMasivs = userInput.split(",");
-                console.log(ievaditaisMasivs);
+        function saglabatMasivu() {
+            let userInput = document.getElementById("input1").value;
+            ievaditaisMasivs = userInput.split(",");
+            console.log(ievaditaisMasivs);
 
-            }
-            function mekletSkaitli() {
-                let mekletaisSkaitlis = document.getElementById("input2").value;
+        }
+        function mekletSkaitli() {
+            let mekletaisSkaitlis = document.getElementById("input2").value;
 
-                if (ievaditaisMasivs.includes(mekletaisSkaitlis)) {
-                    alert(mekletaisSkaitlis + " atrodas masīvā.");
-                } else {
-                    alert(mekletaisSkaitlis + " nav atrasts masīvā.");
-                }
+            if (ievaditaisMasivs.includes(mekletaisSkaitlis)) {
+                alert(mekletaisSkaitlis + " atrodas masīvā");
+            } else {
+                alert(mekletaisSkaitlis + " nav atrasts masīvā");
             }
+        }
         
 
         function task1() {
