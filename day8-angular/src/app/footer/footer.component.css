@@ -1,0 +1,50 @@
+/* footer.component.css */
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .page-structure,
+  .contact-info {
+    flex: 1;
+  }
+  
+  .page-structure ul,
+  .contact-info p {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .page-structure ul li,
+  .contact-info p {
+    margin-bottom: 10px;
+  }
+  
+  .page-structure ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .page-structure ul li a:hover {
+    color: #555;
+  }
+  
+  .contact-info strong {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Optional: Adjust the font size and colors as needed */
+  
