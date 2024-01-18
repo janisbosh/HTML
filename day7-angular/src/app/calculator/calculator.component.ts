@@ -15,9 +15,9 @@ export class CalculatorComponent {
 
   calculateSum(): void {
 
-   {
-      
-    this.sum = +this.number1 + +this.number2;
+    {
+
+      this.sum = +this.number1 + +this.number2;
 
     }
   }
