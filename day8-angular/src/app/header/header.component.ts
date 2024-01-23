@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,9 @@ import { FormsModule } from '@angular/forms';
   imports: [FormsModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
+  
 })
 export class HeaderComponent {
 
   
-  searchQuery: string = '';
 }
