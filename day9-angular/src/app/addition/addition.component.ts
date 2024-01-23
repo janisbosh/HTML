@@ -1,19 +1,25 @@
 import { Component } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-addition',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './addition.component.html',
   styleUrl: './addition.component.css'
 })
 export class AdditionComponent {
 
-  number1: number = 0;
-  number2: number = 0;
-  sum: number = 0;
+  number1: number;
+  number2: number;
+  result: number | null;
 
-  calculateSum() {
-    this.sum = this.number1 + this.number2;
+  constructor() {
+    this.number1 = 0;
+    this.number2 = 0;
+    this.result = null;
+  }
+
+  performAddition() {
+    this.result = this.number1 + this.number2;
   }
 }

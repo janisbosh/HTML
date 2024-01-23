@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-subtraction',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './subtraction.component.html',
   styleUrl: './subtraction.component.css'
 })

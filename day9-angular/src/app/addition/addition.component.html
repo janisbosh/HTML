@@ -1,14 +1,17 @@
-<div>
-    <label for="number1">Skaitlis 1:</label>
-    <input type="number" id="number1" [(ngModel)]="number1">
-  </div>
-  <div>
-    <label for="number2">Skaitlis 2:</label>
-    <input type="number" id="number2" [(ngModel)]="number2">
-  </div>
-  <div>
-    <button (click)="calculateSum()">Saskaitīt</button>
-  </div>
-  <div>
-    <p>Summa: {{ sum }}</p>
-  </div>
+<div class="container">
+  <form (ngSubmit)="performAddition()">
+    <div class="form-group input-group">
+      <label for="number1">Number 1:</label>
+      <input type="number" id="number1" [(ngModel)]="number1" name="number1" required>
+    </div>
+
+    <div class="form-group input-group">
+      <label for="number2">Number 2:</label>
+      <input type="number" id="number2" [(ngModel)]="number2" name="number2" required>
+    </div>
+
+    <button type="submit">Add</button>
+  </form>
+
+  <div class="result" *ngIf="result !== null">Result: {{ result }}</div>
+</div>

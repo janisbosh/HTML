@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-division',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './division.component.html',
   styleUrl: './division.component.css'
 })
