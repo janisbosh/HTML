@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+
 
 import { AdditionComponent } from './addition/addition.component';
 import { DivisionComponent } from './division/division.component';
@@ -13,7 +13,7 @@ import { MultiplicationComponent } from './multiplication/multiplication.compone
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, AdditionComponent, DivisionComponent, HeaderComponent, SubtractionComponent, RouterOutlet,FormsModule, MultiplicationComponent],
+  imports: [CommonModule, AdditionComponent, DivisionComponent, HeaderComponent, SubtractionComponent, RouterOutlet, MultiplicationComponent],
   
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

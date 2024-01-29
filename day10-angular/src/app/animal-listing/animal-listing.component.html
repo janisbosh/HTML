@@ -1,0 +1,6 @@
+<div class="animal-frame" *ngFor="let animal of animalList">
+    <p>Name: {{ animal.name }}</p>
+    <p>Age: {{ animal.age }}</p>
+    <p>Species: {{ animal.species }}</p>
+    <img [src]="animal.imageLink" alt="Animal Image" class="animal-image">
+</div>
