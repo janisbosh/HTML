@@ -1,6 +1,19 @@
-<div class="animal-frame" *ngFor="let animal of animalList">
+
+<div class="animal-frame" *ngFor="let animal of animalList; let i = index">
     <p>Name: {{ animal.name }}</p>
     <p>Age: {{ animal.age }}</p>
     <p>Species: {{ animal.species }}</p>
     <img [src]="animal.imageLink" alt="Animal Image" class="animal-image">
-</div>
+  </div>
+  
+
+  <div class="update-form">
+    <label for="orderNumber">Number:</label>
+    <input type="number" id="orderNumber" [(ngModel)]="orderNumber" />
+  
+    <label for="newName">New Name:</label>
+    <input type="text" id="newName" [(ngModel)]="newName" />
+  
+    <button (click)="updateAnimalName()">Update Name</button>
+  </div>
+  
